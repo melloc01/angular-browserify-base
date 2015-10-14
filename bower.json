@@ -1,0 +1,21 @@
+{
+  "name": "Sellead",
+  "version": "0.1.0",
+  "authors": [
+    "Rafael Mello Campanari <lab.rafamello@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0",
+    "ui-select": "angular-ui-select#~0.13.1"
+  }
+}

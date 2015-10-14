@@ -1,0 +1,114 @@
+<ng-include src="'partials/page-header.html'"></ng-include>
+<div class="main-content">
+
+	<div class="row grid">
+		
+		<div class="col-md-12">
+			<!-- *** Stripped Rows *** -->
+			<!-- panel -->
+			<div class="panel panel-piluku">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Professores - Cadastrar Professor
+						<span class="panel-options">
+							<a href="#" class="panel-refresh">
+								<button class="btn btn-default" ng-click="cancel()"> <span><i class="ion-android-arrow-back"></i> Voltar</span> </button>
+							</a>
+						</span>
+					</h3>
+				</div>
+				<div style="display: block;" class="panel-body">
+				
+					<form name="form" class="form-horizontal" role="form" novalidate ng-submit="add.submit()">
+
+						<div class="row">
+							<div class=" col-md-10">
+
+								<div class="form-group">
+
+									<div class="col-md-6">
+										<label for="">Nome</label>
+										<input 
+										type="text" 
+										class="form-control" 
+										placeholder="Nome" 
+										name="name" 
+										ng-model="add.entity.name"
+										required
+										>
+										<form-messages field="name"></form-messages>
+									</div>
+
+									<div class="col-md-4">
+										<label for="">E-mail</label>
+										<input 
+										type="email" 
+										class="form-control" 
+										placeholder="E-mail" 
+										name="email" 
+										ng-model="add.entity.email"
+										required
+										>
+										<form-messages field="email"></form-messages>
+									</div>
+
+
+								</div>
+								
+								<div class="form-group">
+
+
+									<div class="col-md-2 col-sm-4">
+										<label for="">Senha</label>
+										<input 
+											type="password" 
+											class="form-control" 
+											placeholder="Senha" 
+											name="password" 
+											ng-model="add.entity.password"
+											required
+										>
+										<form-messages field="password"></form-messages>
+									</div>
+
+								</div>
+
+								<div class="form-group">
+
+									<div class="col-md-4">
+										<label for="">Universidade</label>
+									
+										<select 
+											class="form-control" 
+											ng-model="add.entity.university_id" 
+											name="university"
+											required >
+
+											<option value="">Selecione uma universidade</option>
+											<option ng-repeat="university in add.universities" value="{{university.id}}">{{university.name}}</option>
+										
+										</select>
+									
+										<form-messages field="university"></form-messages>
+									
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+						<div class="m-foot text-right">
+							<button type="button" class="btn btn-default" ng-click="cancel()" >Cancelar</button>
+							<button type="submit" class="btn btn-green">Cadastrar</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			<!-- /panel -->
+		</div>
+
+	</div>
+
+</div>

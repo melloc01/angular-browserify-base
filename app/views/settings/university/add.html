@@ -1,0 +1,144 @@
+<ng-include src="'partials/page-header.html'"></ng-include>
+<div class="main-content">
+
+	<div class="row grid">
+		
+		<div class="col-md-12">
+			<!-- *** Stripped Rows *** -->
+			<!-- panel -->
+			<div class="panel panel-piluku">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Universidades - Cadastrar Universidade
+						<span class="panel-options">
+							<a href="#" class="panel-refresh">
+								<button class="btn btn-default" ng-click="cancel()"> <span><i class="ion-android-arrow-back"></i> Voltar</span> </button>
+							</a>
+						</span>
+					</h3>
+				</div>
+				<div style="display: block;" class="panel-body">
+				
+					<form name="form" class="form-horizontal" role="form" novalidate ng-submit="add.submit()">
+
+						<div class="row">
+							<div class=" col-sm-10">
+
+
+								<div class="form-group">
+
+									<div class="col-sm-8">
+										<label for="">Nome</label>
+										<input 
+										type="text" 
+										class="form-control" 
+										required placeholder="Nome" 
+										name="name" 
+										ng-model="add.entity.name"
+										ng-minlength="3"
+										required
+										>
+										<form-messages field="name"></form-messages>
+									</div>
+
+									<div class="col-sm-4">
+										<label for="">Sigla</label>
+										<input 
+										type="text" class="form-control" 
+										required placeholder="Sigla" 
+										name="acronym" 
+										ng-model="add.entity.acronym"
+										required
+										>
+										<form-messages field="acronym"></form-messages>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+						<br>
+						<legend>Responsável</legend>
+
+						<div class="row">	
+							<div class=" col-md-10">
+
+								<div class="form-group">
+
+									<div class="col-md-6">
+										<label for="">Nome</label>
+										<input 
+										type="text" 
+										class="form-control" 
+										placeholder="Nome" 
+										name="username" 
+										ng-model="add.user.name"
+										required
+										>
+										<form-messages field="username"></form-messages>
+									</div>
+
+									<div class="col-md-4">
+										<label for="">E-mail</label>
+										<input 
+										type="email" 
+										class="form-control" 
+										placeholder="E-mail" 
+										name="email" 
+										ng-model="add.user.email"
+										required
+										>
+										<form-messages field="email"></form-messages>
+									</div>
+
+
+								</div>
+								
+								<div class="form-group">
+
+
+									<div class="col-md-3 col-sm-6">
+										<label for="">CPF</label>
+										<input 
+											type="text" 
+											class="form-control" 
+											placeholder="CPF" 
+											name="cpf" 
+											ng-model="add.user.cpf"
+											ng-minlength="11"
+											required
+										>
+										<form-messages field="cpf"></form-messages>
+									</div>
+
+									<div class="col-md-3 col-sm-6">
+										<label for="">Senha</label>
+										<input 
+											type="password" 
+											class="form-control" 
+											placeholder="Senha" 
+											name="password" 
+											ng-model="add.user.password"
+											required
+										>
+										<form-messages field="password"></form-messages>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="m-foot text-right">
+							<button type="button" class="btn btn-default" ng-click="cancel()" >Cancelar</button>
+							<button type="submit" class="btn btn-green">Cadastrar</button>
+						</div>
+
+					</form>
+				</div>
+			</div>
+			<!-- /panel -->
+		</div>
+
+	</div>
+
+</div>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js">
+  <toaster-container></toaster-container>
+<head>
+      <base href="/">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title ng-bind="pageTitle"></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body ng-controller="AppController as App">
+
+
+    <div class="piluku-preloader text-center">
+        <div class="loader">Loading...</div>
+    </div>
+
+  <div class="wrapper ">
+    <ng-include src="'partials/left-sidebar.html'" ng-controller="LeftBarCtrl as leftbar"  ng-show="App.user" ></ng-include>
+
+  	<div ng-class="App.user ? 'content' : ''" id="content" >
+
+        <div class="overlay"></div>
+        <div ui-view></div>
+
+  	</div><!-- /content -->
+
+  </div><!-- /wrapper -->
+
+	<script src="js/main.js"></script>
+	
+	<script src="assetsjs/theme.js"></script>
+	
+	<script>
+		jQuery(window).load(function () {
+	    	$('.piluku-preloader').addClass('hidden');
+	  	});
+	</script>
+
+</body>
+
+</html>

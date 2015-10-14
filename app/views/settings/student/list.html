@@ -1,0 +1,59 @@
+<ng-include src="'partials/page-header.html'"></ng-include>
+<div class="main-content">
+
+	<div class="row grid">
+		
+		<div class="col-md-12">
+			<!-- *** Stripped Rows *** -->
+			<!-- panel -->
+			<div class="panel panel-piluku">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Alunos
+						<span class="panel-options">
+							<a href="#" class="panel-refresh">
+								<button class="btn btn-green"ng-click="list.add()"> <span>Cadastrar Aluno</span> <i class="ion ion-android-add-circle"></i></button>
+							</a>
+						</span>
+					</h3>
+				</div>
+				<div style="display: block;" class="panel-body">
+
+					<!-- Table -->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Nome</th>
+								<th>E-mail</th>
+								<th>Universidade</th>
+								<th>Criação</th>
+								<th class="text-center">Ações</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="(key, entity) in list.entities">
+								<td>{{ ::entity.id }}</td>
+								<td>{{ ::entity.name }}</td>
+								<td>{{ ::entity.email }}</td>
+								<td>{{ ::entity.university.acronym }}</td>
+								<td>{{ ::entity.created_at | date:"dd/MM/yyyy 'às' H:mm:ss " }}</td>
+								<td class="text-center">
+									<button tooltip="editar" ng-click="list.edit(entity)" class="btn btn-primary btn-icon-primary">
+										<i class="ion ion-edit"></i>
+									</button>			
+									<button tooltip="excluir" ng-click="list.destroy(entity)" class="btn btn-danger btn-icon-danger">
+										<i class="ion ion-android-delete"></i>
+									</button>								
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- /panel -->
+		</div>
+
+	</div>
+
+</div>

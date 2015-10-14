@@ -1,0 +1,38 @@
+<div class="main-content">
+    <div class="panel">
+       <div class="panel-body">
+                <!--form-heading-->
+                <div class="form-heading">
+                    Add Cookie
+                </div>
+                <!--form-heading-->
+                <form class="form form-horizontal" >
+                    <!--Default Horizontal Form-->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Taste:</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="taste" placeholder="Taste" ng-model='cookie.taste'>
+                        </div>
+                    </div>
+                    <!--Default Horizontal Form-->
+
+                    <div class="form-group">
+                        <div class="col-md-2">
+                            <label class="control-label align-rt">Price</label>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="input-group date-block">
+                                <input type="text" class="form-control" name="price" placeholder="Price" ng-model='cookie.price'>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <button ng-click='cookie.submit()'>Submit</button>
+                </form>
+            </div>
+    </div>
+
+</div>
+
+<!-- {{cookie}} -->

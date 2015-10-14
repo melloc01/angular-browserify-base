@@ -1,0 +1,41 @@
+<div class="left-bar">
+    <div class="admin-logo">
+        <div class="logo-holder pull-left">
+                <big style="color:white"> Webfolio </big>
+<!--             <img class="logo" ng-src="images/example.png" alt="logo">
+ -->        </div>
+        <!-- logo-holder -->
+        <a href="#"  class="menu-bar  pull-right"><i class="ti-menu"></i></a>
+    </div>
+    <!-- admin-logo -->
+    <ul class="list-unstyled menu-parent" id="mainMenu">
+        <li>
+            <a ui-sref="home">
+                <i class="icon ti-home"></i>
+                <span class="text">Início</span>
+            </a>
+        </li>
+        <li class="submenu" ng-show="App.isAllowed('settings')">
+            <a class="waves-effect waves-light" href="#piluku_premium">
+                <i class="icon ti-settings"></i>
+                <span class="text" >Configurações</span>
+                <i class="chevron ti-angle-right"></i>
+            </a>
+            <ul class="list-unstyled" id="piluku_premium">
+                <li><a ng-show="App.isAllowed('university.list')" ui-sref="university.list">Universidades</a></li>
+                <li><a ng-show="App.isAllowed('secretariat.list')" ui-sref="secretariat.list">Secretarias</a></li>
+                <li><a ng-show="App.isAllowed('discipline.list')" ui-sref="discipline.list">Disciplinas</a></li>
+                <li><a ng-show="App.isAllowed('professor.list')" ui-sref="professor.list">Docentes</a></li>
+                <li><a ng-show="App.isAllowed('monitor.list')" ui-sref="monitor.list">Monitores</a></li>
+                <li><a ng-show="App.isAllowed('student.list')" ui-sref="student.list">Alunos</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:void(0)" ng-click="App.logout();">
+                <i class="icon ti-shift-left"></i>
+                <span class="text">Logout</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- left-bar

@@ -1,0 +1,8 @@
+'use strict';
+
+var AppSettings = {
+  appTitle: 'Lanche Bom Lanchonete e Pizzaria',
+  apiUrl: 'http://api.lancheria.dev/'
+};
+
+module.exports = AppSettings;
